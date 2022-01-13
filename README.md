@@ -11,10 +11,10 @@ Top Level Directory Layout:
 ├── .env                        # Environment file
 ├── Dockerfile                  # App  Dockerfile
 ├── routes                      # Express route controllers for all the endpoints of the app
-├── routes -> api                # Component specific routing placed here
+├── routes -> api               # Component specific routing placed here
 ├── utility                     # Logger and configuration related files
-├── endpoints -> handler         # All the business logic is here
-├── endpoints -> utils           # All endpoint/API utilities placed here
+├── endpoints -> handler        # All the business logic is here
+├── endpoints -> utils          # All endpoint/API utilities placed here
 ├── tests                       # Manual/Automated Tests
 ```
 ## Running Locally
