@@ -1,0 +1,23 @@
+{
+  "name": "templateproj",
+  "version": "1.0.0",
+  "description": "A Template project setup",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js"
+  },
+  "author": "Shruti Chandran A",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "jest": "^27.4.7",
+    "moment-timezone": "^0.5.34",
+    "nodemon": "^2.0.15",
+    "winston": "^3.4.0"
+  }
+}
