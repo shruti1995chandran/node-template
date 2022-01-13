@@ -3,27 +3,26 @@ const compression = require("compression");
 const cors = require("cors");
 
 const app = express();
-const dotenv = require("dotenv");
-dotenv.config();
 app.use(compression());
 app.use(cors());
+const { SERVER_PORT } = require("./utility/config");
 
-const port = process.env.SERVER_PORT;
+const port = SERVER_PORT || "3000";
 
-app.use("/api/v1",require('./routes'));
+app.use("/api/v1", require("./routes"));
 
 //Generic Error
 app.use((err, req, res) => {
-    res.status(err.status_code).send({
-        status: "failure",
-        error: {
-          status_code: err.status_code,
-          error_key: err.error_key,
-          error_message: err.error_message
-        },
-      });
+  res.status(err.status_code).send({
+    status: "failure",
+    error: {
+      status_code: err.status_code,
+      error_key: err.error_key,
+      error_message: err.error_message,
+    },
   });
+});
 
-app.listen(port, function(){
-    console.log("Server is running at port ", port)
-})
+app.listen(port, function () {
+  console.log("Server is running at port ", port);
+});

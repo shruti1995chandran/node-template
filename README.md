@@ -2,6 +2,20 @@
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 
+## Project Structure
+
+Top Level Directory Layout:
+.
+├── app.js                      # App entrypoint
+├── .env                        # Environment file
+├── Dockerfile                  # App  Dockerfile
+├── routes                      # Express route controllers for all the endpoints of the app
+├── routes -> api                # Component specific routing placed here
+├── utility                     # Logger and configuration related files
+├── endpoints -> handler         # All the business logic is here
+├── endpoints -> utils           # All endpoint/API utilities placed here
+├── tests                       # Manual/Automated Tests
+
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) installed.
