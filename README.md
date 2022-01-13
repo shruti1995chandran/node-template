@@ -5,6 +5,7 @@ A barebones Node.js app using [Express 4](http://expressjs.com/).
 ## Project Structure
 
 Top Level Directory Layout:
+```sh
 .
 ├── app.js                      # App entrypoint
 ├── .env                        # Environment file
@@ -15,7 +16,7 @@ Top Level Directory Layout:
 ├── endpoints -> handler         # All the business logic is here
 ├── endpoints -> utils           # All endpoint/API utilities placed here
 ├── tests                       # Manual/Automated Tests
-
+```
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) installed.
