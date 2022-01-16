@@ -5,18 +5,17 @@ A barebones Node.js app using [Express 4](http://expressjs.com/).
 ## Project Structure
 
 Top Level Directory Layout:
+
 ```sh
-.
+src
 ├── app.js                      # App entrypoint
-├── .env                        # Environment file
-├── Dockerfile                  # App  Dockerfile
-├── routes                      # Express route controllers for all the endpoints of the app
-├── routes -> api               # Component specific routing placed here
-├── utility                     # Logger and configuration related files
-├── endpoints -> handler        # All the business logic is here
-├── endpoints -> utils          # All endpoint/API utilities placed here
-├── tests                       # Manual/Automated Tests
+├── routes.js                   # Express route controllers for all the endpoints of the app
+├── utils                       # Logger and configuration related files
+├── logic-folders               # Codebase logic seperated by fucntionality
+
+Apart from the above mentioned folder, business logic is split according to the functionality it performs. For eg. users folder has the handler, controller and test files for easy access.
 ```
+
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) installed.

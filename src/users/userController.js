@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const userhandler = require("../../endpoints/handler/userhandler");
+const { userFunction1 } = require("./userHandler");
 
 // Get Something
 router.get("/", async (req, res, next) => {
   try {
-    let functionResponse = await userhandler.userFunction1();
+    let response = await userFunction1();
     res.status(200).send({
       status: "success",
-      data: functionResponse,
+      data: response,
     });
   } catch (err) {
     next(err);
@@ -18,10 +18,15 @@ router.get("/", async (req, res, next) => {
 
 // Post Something
 router.post("/posting", (req, res, next) => {
-  res.status(200).send({
-    status: "success",
-    data: "Post successful!!",
-  });
+  try {
+    res.status(200).send({
+      status: "success",
+      data: "Post successful!!",
+    });
+  } catch (err) {
+    next(err);
+    return;
+  }
 });
 
 module.exports = router;

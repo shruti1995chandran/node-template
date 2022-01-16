@@ -5,9 +5,9 @@ const cors = require("cors");
 const app = express();
 app.use(compression());
 app.use(cors());
-const { SERVER_PORT } = require("./utility/config");
+const { SERVER_PORT } = require("./utils/config");
 
-const port = SERVER_PORT || "3000";
+const port = SERVER_PORT;
 
 app.use("/api/v1", require("./routes"));
 
