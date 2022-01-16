@@ -11,7 +11,7 @@ src
 ├── app.js                      # App entrypoint
 ├── routes.js                   # Express route controllers for all the endpoints of the app
 ├── utils                       # Logger and configuration related files
-├── logic-folders               # Codebase logic seperated by fucntionality
+├── logic-folders               # Codebase logic seperated by functionality
 
 Apart from the above mentioned folder, business logic is split according to the functionality it performs. For eg. users folder has the handler, controller and test files for easy access.
 ```
